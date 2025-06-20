@@ -67,14 +67,14 @@ export default function ContactPage() {
                 target="_blank"
                 className="relative flex flex-col items-center gap-4 p-8 duration-700 group"
               >
-                <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-primary dark:border-primary-dark bg-zinc-900 group-hover:border-zinc-200 text-secondary dark:text-secondary-dark">
+                <span className="relative z-10 flex items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full bg-white dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200 group-hover:text-black dark:group-hover:text-white group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800 border-zinc-300 dark:border-primary-dark">
                   {s.icon}
                 </span>
                 <div className="z-10 flex flex-col items-center">
-                  <span className="text-lg font-medium duration-150 text-zinc-200 group-hover:text-white font-display">
+                  <span className="text-lg font-medium duration-150 text-zinc-900 dark:text-zinc-200 group-hover:text-black dark:group-hover:text-white font-display">
                     {s.handle}
                   </span>
-                  <span className="mt-2 text-sm duration-1000 text-secondary dark:text-secondary-dark group-hover:text-zinc-200">
+                  <span className="mt-2 text-sm duration-1000 text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-700 dark:group-hover:text-zinc-200">
                     {s.label}
                   </span>
                 </div>
@@ -94,42 +94,42 @@ export default function ContactPage() {
               <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" />
 
               <div>
-                <label className="block text-sm text-secondary dark:text-secondary-dark mb-1" htmlFor="name">Name *</label>
+                <label className="block text-sm text-zinc-600 dark:text-zinc-400 mb-1" htmlFor="name">Name *</label>
                 <input
                   required
                   id="name"
                   name="name"
                   type="text"
-                  className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-3 py-2 text-zinc-200 focus:outline-none focus:border-primary dark:border-primary-dark"
+                  className="w-full bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-md px-3 py-2 text-zinc-900 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-primary dark:focus:ring-primary-dark"
                 />
               </div>
               <div>
-                <label className="block text-sm text-secondary dark:text-secondary-dark mb-1" htmlFor="email">Email *</label>
+                <label className="block text-sm text-zinc-600 dark:text-zinc-400 mb-1" htmlFor="email">Email *</label>
                 <input
                   required
                   id="email"
                   name="email"
                   type="email"
-                  className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-3 py-2 text-zinc-200 focus:outline-none focus:border-primary dark:border-primary-dark"
+                  className="w-full bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-md px-3 py-2 text-zinc-900 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-primary dark:focus:ring-primary-dark"
                 />
               </div>
               <div>
-                <label className="block text-sm text-secondary dark:text-secondary-dark mb-1" htmlFor="company">Company</label>
+                <label className="block text-sm text-zinc-600 dark:text-zinc-400 mb-1" htmlFor="company">Company</label>
                 <input
                   id="company"
                   name="company"
                   type="text"
-                  className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-3 py-2 text-zinc-200 focus:outline-none focus:border-primary dark:border-primary-dark"
+                  className="w-full bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-md px-3 py-2 text-zinc-900 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-primary dark:focus:ring-primary-dark"
                 />
               </div>
               <div>
-                <label className="block text-sm text-secondary dark:text-secondary-dark mb-1" htmlFor="message">Message *</label>
+                <label className="block text-sm text-zinc-600 dark:text-zinc-400 mb-1" htmlFor="message">Message *</label>
                 <textarea
                   required
                   id="message"
                   name="message"
                   rows={5}
-                  className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-3 py-2 text-zinc-200 focus:outline-none focus:border-primary dark:border-primary-dark"
+                  className="w-full bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-md px-3 py-2 text-zinc-900 dark:text-zinc-200 focus:outline-none focus:ring-1 focus:ring-primary dark:focus:ring-primary-dark"
                 />
               </div>
               <button
