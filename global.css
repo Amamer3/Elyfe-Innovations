@@ -2,27 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  @keyframes ripple {
-    0% {
-      width: 0;
-      height: 0;
-      opacity: 0.4;
-    }
-    100% {
-      width: 1200px;
-      height: 1200px;
-      opacity: 0;
-    }
-  }
-  .animate-ripple {
-    animation: ripple 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   }
 }
 
-@layer base {
-  .text-edge-outline {
-    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
-  }
-} 
+/* View Transition styles */
 
+@keyframes reveal-new {
+  from {
+    clip-path: circle(0% at var(--x) var(--y));
+  }
+  to {
+    clip-path: circle(var(--r) at var(--x) var(--y));
+  }
+}
+
+@keyframes reveal-old {
+  from {
+    clip-path: circle(var(--r) at var(--x) var(--y));
+  }
+  to {
+    clip-path: circle(0% at var(--x) var(--y));
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Light -> Dark: New (dark) view is on top and expands */
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+  animation: reveal-new 0.5s ease-in-out;
+}
+
+/* Dark -> Light: Old (dark) view is on top and shrinks */
+.dark::view-transition-old(root) {
+  z-index: 9999;
+  animation: reveal-old 0.5s ease-in-out;
+}
+.dark::view-transition-new(root) {
+  z-index: 1;
+  animation: none; /* Don't animate the new view */
+}
