@@ -1,4 +1,6 @@
 import "../global.css";
+import { ThemeProvider } from "./components/theme-provider";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
@@ -63,12 +65,15 @@ export default function RootLayout({
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
       </head>
+      <ThemeProvider>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        className={`bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
         {children}
+        <ThemeSwitcher />
       </body>
+    </ThemeProvider>
     </html>
   );
 }

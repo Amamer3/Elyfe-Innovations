@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	darkMode: "class",
 	content: [
 		"./app/**/*.{js,ts,jsx,tsx}",
 		"./mdx-components.tsx",
@@ -10,6 +11,16 @@ module.exports = {
 
 	theme: {
 		extend: {
+            colors: {
+                primary: {
+                    DEFAULT: '#32DBAB', // rgb(50,219,171)
+                    dark: '#51E0B8', // dark mode variant of primary (slightly lighter for improved contrast)
+                },
+                secondary: {
+                    DEFAULT: '#00C4EE', // rgb(0,196,238)
+                    dark: '#26CDF1', // dark mode variant of secondary (slightly lighter for improved contrast)
+                },
+            },
 			typography: {
 				DEFAULT: {
 					css: {
