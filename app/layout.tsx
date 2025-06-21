@@ -7,14 +7,14 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Elyfe Innovation",
+    default: "Elyfe Innovations",
     template: "%s | elyfe.net",
   },
-  description: "Base Website for Elyfe Innovation",
+  description: "Elyfe Innovations | Empowering Tomorrow's Distributed Ecosystems",
   openGraph: {
-    title: "Elyfe Innovation",
+    title: "Elyfe Innovations",
     description:
-      "Base Website for Elyfe Innovation",
+      "Elyfe Innovations | Empowering Tomorrow's Distributed Ecosystems",
     url: "https://elyfe.net",
     siteName: "elyfe.net",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "ElyfeGh",
+    title: "Elyfe Innovations",
     card: "summary_large_image",
   },
   icons: {
