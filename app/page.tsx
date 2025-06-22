@@ -2,36 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Particles from "./components/particles";
 
-const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "/contact" },
-];
-
 export default function Home() {
   return (
     <div className="relative w-full min-h-screen scroll-smooth bg-gradient-to-tl from-white via-zinc-100/40 to-white text-zinc-800 dark:from-black dark:via-zinc-800/40 dark:to-black dark:text-zinc-200" id="home">
       {/* Background Particles */}
-      <Particles className="absolute inset-0 -z-10" quantity={120} />
+      <Particles className="absolute inset-0 -z-10" quantity={2000}  />
 
-      {/* Site Navigation */}
-      <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-lg bg-white/60 dark:bg-black/40 border-b border-zinc-200 dark:border-zinc-700">
-        <nav className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
-          <span className="font-display text-lg md:text-xl text-zinc-900 dark:text-white">Elyfe Innovations</span>
-          <ul className="hidden md:flex gap-6 text-sm">
-            {navItems.map(({ label, href }) => (
-              <li key={href}>
-                <Link href={href} className="text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white duration-150">
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header>
+
 
       {/* HERO SECTION */}
       <section className="flex flex-col items-center justify-center pt-32 pb-24 text-center" id="hero">

@@ -25,9 +25,9 @@ export default function ThemeSwitcher() {
           style={{ left: theme === "light" ? "2px" : "calc(100% - 26px)" }}
         >
           {theme === "dark" ? (
-            <Sun size={14} className="text-yellow-500" />
-          ) : (
             <Moon size={14} className="text-slate-800" />
+          ) : (
+            <Sun size={14} className="text-yellow-500" />
           )}
         </motion.div>
       </div>

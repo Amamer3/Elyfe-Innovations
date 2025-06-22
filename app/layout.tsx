@@ -1,6 +1,7 @@
 import "../global.css";
 import { ThemeProvider } from "./components/theme-provider";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+import { Navigation } from "./components/nav";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
@@ -62,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" className={[inter.variable, calSans.variable, "scroll-smooth"].join(" ")}>
       <head>
       </head>
       <ThemeProvider>
@@ -70,6 +71,7 @@ export default function RootLayout({
         className={`bg-white dark:bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
           }`}
       >
+        <Navigation />
         {children}
         <ThemeSwitcher />
       </body>
