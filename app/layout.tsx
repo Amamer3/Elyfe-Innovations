@@ -1,8 +1,7 @@
 import "../global.css";
 import { ThemeProvider } from "./components/theme-provider";
-import ThemeSwitcher from "./components/ThemeSwitcher";
 import { Navigation } from "./components/nav";
-import { Inter } from "@next/font/google";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 
@@ -50,11 +49,25 @@ export const metadata: Metadata = {
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
 });
 
 const calSans = LocalFont({
   src: "../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -63,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable, "scroll-smooth"].join(" ")}>
+    <html lang="en" className={[inter.variable, spaceGrotesk.variable, jetbrainsMono.variable, calSans.variable, "scroll-smooth"].join(" ")}>
       <head>
       </head>
       <ThemeProvider>
@@ -73,7 +86,6 @@ export default function RootLayout({
       >
         <Navigation />
         {children}
-        <ThemeSwitcher />
       </body>
     </ThemeProvider>
     </html>
