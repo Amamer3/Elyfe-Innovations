@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import Particles from "../components/particles";
+import Footer from "../components/Footer";
 import { 
   Calendar, 
   Clock, 
@@ -361,6 +362,8 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

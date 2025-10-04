@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import Particles from "../components/particles";
+import Footer from "../components/Footer";
 import { Users, Target, Award, Globe, ArrowRight, CheckCircle, Star } from "lucide-react";
 import { motion, useInView, useAnimation, useScroll, useTransform } from "framer-motion";
 
@@ -503,6 +504,8 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

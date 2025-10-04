@@ -5,6 +5,7 @@ import { useState, FormEvent } from "react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import Particles from "../components/particles";
+import Footer from "../components/Footer";
 
 const socials = [
   {
@@ -93,62 +94,68 @@ export default function ContactPage() {
 
           {/* Contact Methods */}
           <div className="space-y-6">
-            <Card className="group p-6 hover:scale-105 transition-all duration-300">
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-gradient-to-r from-primary to-secondary group-hover:scale-110 transition-transform duration-300">
-                  <Mail size={24} className="text-white" />
+            <Link href="mailto:info@elyfe.net">
+              <Card className="group p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-primary to-secondary group-hover:scale-110 transition-transform duration-300">
+                    <Mail size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-heading font-bold text-zinc-900 dark:text-white group-hover:text-primary transition-colors">
+                      Email Us
+                    </h3>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                      info@elyfe.net
+                    </p>
+                    <p className="text-zinc-500 text-xs mt-1">
+                      We'll respond within 24 hours
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-heading font-bold text-zinc-900 dark:text-white group-hover:text-primary transition-colors">
-                    Email Us
-                  </h3>
-                  <p className="text-zinc-600 dark:text-zinc-400 text-sm">
-                    info@elyfe.net
-                  </p>
-                  <p className="text-zinc-500 text-xs mt-1">
-                    We'll respond within 24 hours
-                  </p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </Link>
 
-            <Card className="group p-6 hover:scale-105 transition-all duration-300">
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-gradient-to-r from-secondary to-primary group-hover:scale-110 transition-transform duration-300">
-                  <Twitter size={24} className="text-white" />
+            <Link href="https://twitter.com/elyfegh">
+              <Card className="group p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-secondary to-primary group-hover:scale-110 transition-transform duration-300">
+                    <Twitter size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-heading font-bold text-zinc-900 dark:text-white group-hover:text-primary transition-colors">
+                      Follow Us
+                    </h3>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                      @elyfegh
+                    </p>
+                    <p className="text-zinc-500 text-xs mt-1">
+                      Latest updates and insights
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-heading font-bold text-zinc-900 dark:text-white group-hover:text-primary transition-colors">
-                    Follow Us
-                  </h3>
-                  <p className="text-zinc-600 dark:text-zinc-400 text-sm">
-                    @elyfegh
-                  </p>
-                  <p className="text-zinc-500 text-xs mt-1">
-                    Latest updates and insights
-                  </p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </Link>
 
-            <Card className="group p-6 hover:scale-105 transition-all duration-300">
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-gradient-to-r from-primary to-secondary group-hover:scale-110 transition-transform duration-300">
-                  <Github size={24} className="text-white" />
+            <Link href="https://github.com/Elyfe-innovations">
+              <Card className="group p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-primary to-secondary group-hover:scale-110 transition-transform duration-300">
+                    <Github size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-heading font-bold text-zinc-900 dark:text-white group-hover:text-primary transition-colors">
+                      Our Code
+                    </h3>
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                      Elyfe-Innovations
+                    </p>
+                    <p className="text-zinc-500 text-xs mt-1">
+                      Open source contributions
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-heading font-bold text-zinc-900 dark:text-white group-hover:text-primary transition-colors">
-                    Our Code
-                  </h3>
-                  <p className="text-zinc-600 dark:text-zinc-400 text-sm">
-                    Elyfe-Innovations
-                  </p>
-                  <p className="text-zinc-500 text-xs mt-1">
-                    Open source contributions
-                  </p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </Link>
           </div>
 
           {/* Office Hours */}
@@ -281,6 +288,8 @@ export default function ContactPage() {
           )}
         </Card>
       </div>
+
+      <Footer />
     </div>
   );
 }

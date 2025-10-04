@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import Particles from "../components/particles";
+import Footer from "../components/Footer";
 import { 
   TrendingUp, 
   Smartphone, 
@@ -434,6 +435,8 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

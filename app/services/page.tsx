@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import Particles from "../components/particles";
+import Footer from "../components/Footer";
 import { 
   Microscope, 
   Cloud, 
@@ -155,7 +156,11 @@ export default function ServicesPage() {
     { name: "Python", category: "Backend" },
     { name: "Go", category: "Backend" },
     { name: "AWS", category: "Cloud" },
-    { name: "Azure", category: "Cloud" }
+    { name: "Azure", category: "Cloud" },
+    { name: ".NET", category: "Backend" },
+    { name: "DNS Services", category: "Networking" },
+    { name: "Forex Exchanges", category: "Financial Services" },
+    { name: "SMS Gateways", category: "Telecom" },
   ];
 
   return (
@@ -350,6 +355,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
